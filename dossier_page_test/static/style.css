@@ -1,0 +1,21 @@
+/* Définition globale de la police d'écriture */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* * Classes personnalisées pour masquer les barres de défilement
+ * (Nécessaires car Tailwind ne les inclut pas par défaut sans plugin)
+ */
+
+/* Pour Chrome, Safari et Opera */
+.scrollbar-hide::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Pour IE, Edge et Firefox */
+.scrollbar-hide,
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

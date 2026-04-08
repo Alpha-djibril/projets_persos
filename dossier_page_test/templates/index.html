@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arame — Assistant IA pour Boutique BIO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>" defer></script>
+</head>
+<body class="bg-white text-slate-600 antialiased selection:bg-[#1a3c34] selection:text-white">
+
+    <nav class="fixed top-0 inset-x-0 bg-white/80 backdrop-blur-md border-b border-slate-100 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2 text-[#1a3c34]">
+                <iconify-icon icon="solar:leaf-linear" width="24" height="24" stroke-width="1.5"></iconify-icon>
+                <span class="font-semibold tracking-tighter text-lg uppercase">Arame</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#probleme" class="hover:text-[#1a3c34] transition-colors">Défis</a>
+                <a href="#demo" class="hover:text-[#1a3c34] transition-colors">Démo Live</a>
+                <a href="#fonctionnalites" class="hover:text-[#1a3c34] transition-colors">Fonctionnalités</a>
+                <a href="#demo" class="bg-[#1a3c34] text-white px-4 py-2 rounded-full hover:bg-[#1a3c34]/90 transition-all">Essayer</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-[#1a3c34]/10 to-transparent rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-start">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#1a3c34]/5 text-[#1a3c34] text-xs font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-[#c4622d] animate-pulse"></span>
+                    Nouveau : Version Beta 1.0
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900 leading-tight mb-6">
+                    Votre boutique BIO,<br>disponible 24h/24
+                </h1>
+                <p class="text-lg text-slate-500 mb-10 max-w-md leading-relaxed">
+                    Assistant IA pour cosmétiques — commandes, conseils et suivi client, automatisés pour booster vos ventes.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                    <a href="#demo" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-[#1a3c34] text-white px-6 py-3 rounded-xl font-medium text-sm hover:bg-[#122b25] transition-all hover:-translate-y-0.5 shadow-lg shadow-[#1a3c34]/20">
+                        Essayer maintenant
+                        <iconify-icon icon="solar:arrow-right-linear" width="18" height="18" stroke-width="1.5"></iconify-icon>
+                    </a>
+                    <a href="#fonctionnalites" class="w-full sm:w-auto inline-flex justify-center items-center bg-white border border-slate-200 text-slate-700 px-6 py-3 rounded-xl font-medium text-sm hover:bg-slate-50 transition-all">
+                        Voir les détails
+                    </a>
+                </div>
+            </div>
+
+            <div class="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 relative lg:ml-auto w-full max-w-sm">
+                <div class="absolute -inset-1 bg-gradient-to-br from-[#1a3c34]/20 to-transparent rounded-[2rem] blur-xl opacity-50 -z-10"></div>
+                
+                <div class="bg-white rounded-[24px] shadow-2xl border border-slate-100 overflow-hidden flex flex-col h-[420px]">
+                    <div class="bg-[#1a3c34] px-5 py-4 flex items-center gap-3 shrink-0">
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                            <iconify-icon icon="solar:leaf-linear" class="text-white" width="20" height="20" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-sm font-medium tracking-tight">Arame</h3>
+                            <p class="text-white/70 text-xs flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-green-400"></span> En ligne
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex-1 bg-slate-50 p-5 overflow-y-auto flex flex-col gap-4">
+                        <div class="flex justify-start">
+                            <div class="bg-white border border-slate-100 text-slate-700 text-sm py-2.5 px-4 rounded-2xl rounded-tl-sm shadow-sm max-w-[85%] leading-relaxed">
+                                Bonjour ! Je suis Arame 🌿 Comment puis-je vous aider ?
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="bg-[#1a3c34] text-white text-sm py-2.5 px-4 rounded-2xl rounded-tr-sm shadow-sm max-w-[85%] leading-relaxed">
+                                Je veux du karité
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="bg-white border border-slate-100 text-slate-700 text-sm py-2.5 px-4 rounded-2xl rounded-tl-sm shadow-sm max-w-[85%] leading-relaxed">
+                                Parfait ! Le karité pur est à 5 000 FCFA. Quelle quantité souhaitez-vous commander ?
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-white border-t border-slate-50 shrink-0">
+                        <div class="flex items-center gap-2 bg-slate-100 rounded-full px-4 py-2">
+                            <span class="text-slate-400 text-sm flex-1">Écrire un message...</span>
+                            <iconify-icon icon="solar:rounded-right-linear" class="text-[#1a3c34]" width="20" height="20" stroke-width="1.5"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="valeur-ia" class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900 mb-4">Une expérience d'achat repensée</h2>
+                <p class="text-slate-500 text-base max-w-2xl mx-auto">Notre assistant intelligent Aline a été développé pour éliminer les frustrations courantes du commerce en ligne et vous accompagner personnellement.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-6 text-[#1a3c34]">
+                        <iconify-icon icon="solar:clock-circle-linear" width="24" height="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-slate-900 mb-2 tracking-tight">Disponibilité immédiate</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Fini l'attente. L'assistant répond instantanément à vos questions sur les prix, les stocks et les délais de livraison, 24h/24 et 7j/7.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-6 text-[#1a3c34]">
+                        <iconify-icon icon="solar:magic-stick-3-linear" width="24" height="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-slate-900 mb-2 tracking-tight">Conseils sur-mesure</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">L'IA analyse votre besoin spécifique (peau sèche, hydratation) pour vous recommander la routine naturelle exacte qu'il vous faut.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-6 text-[#1a3c34]">
+                        <iconify-icon icon="solar:shield-check-linear" width="24" height="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-slate-900 mb-2 tracking-tight">Traitement fiabilisé</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Automatisation de la prise de commande pour garantir des calculs exacts et un traitement logistique sans erreur humaine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produits" class="py-24 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900 mb-4">Nos Produits Phares</h2>
+                <p class="text-slate-500 text-base max-w-2xl mx-auto">Découvrez notre sélection de soins 100% naturels. N'hésitez pas à poser vos questions à notre assistant !</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100 group">
+                    <div class="h-48 bg-slate-200 overflow-hidden relative">
+                        <img src="{{ url_for('static', filename='images/huilecoco_ai.png') }}" alt="Beurre de Karité" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-medium text-slate-900 tracking-tight">Huile de coco vierge</h3>
+                            <span class="text-[#1a3c34] font-semibold">5 000 FCFA</span>
+                        </div>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">100% pur, non raffiné. Idéal pour l'hydratation intense de la peau et des cheveux.</p>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#c4622d] bg-orange-50 px-2 py-1 rounded-md">
+                            Rupture temporaire
+                        </span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 group">
+                    <div class="h-48 bg-slate-200 overflow-hidden relative">
+                        <img src="{{ url_for('static', filename='images/8huiles_ai.png') }}" alt="Chantilly karité et huit huiles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-medium text-slate-900 tracking-tight">Chantilly karité et huit huiles</h3>
+                            <span class="text-[#1a3c34] font-semibold">5 000 FCFA</span>
+                        </div>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">Pressée à froid. Riche en vitamines, parfaite pour restaurer l'élasticité de la peau.</p>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#c4622d] bg-orange-50 px-2 py-1 rounded-md">
+                            En stock (450ml)
+                        </span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300 group">
+                    <div class="h-48 bg-slate-200 overflow-hidden relative">
+                        <img src="{{ url_for('static', filename='images/cacao_karite_ai.png') }}" alt="Chantilly karité et cacao" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-medium text-slate-900 tracking-tight">Chantilly karité et cacao</h3>
+                            <span class="text-[#1a3c34] font-semibold">6 000 FCFA</span>
+                        </div>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">Exfoliant doux naturel, nettoie en profondeur tout en respectant l'épiderme.</p>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-medium text-[#c4622d] bg-orange-50 px-2 py-1 rounded-md">
+                            En stock (500ml)
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900 mb-4">Testez l'assistant en direct</h2>
+                <p class="text-slate-500 text-base">Cliquez sur une suggestion ou tapez votre propre message pour voir Arame en action.</p>
+            </div>
+
+            <div class="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100">
+                <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 overflow-hidden flex flex-col h-[700px] max-w-2xl mx-auto relative">
+                    
+                    <div class="bg-[#1a3c34] px-6 py-5 flex items-center gap-4 z-10 shadow-sm">
+                        <div class="relative">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm border border-white/5">
+                                <iconify-icon icon="solar:leaf-linear" class="text-white" width="24" height="24" stroke-width="1.5"></iconify-icon>
+                            </div>
+                            <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-[#1a3c34] rounded-full"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-base font-medium tracking-tight">Arame — Assistant BIO 🌿</h3>
+                            <p class="text-white/70 text-xs mt-0.5">Répond instantanément</p>
+                        </div>
+                    </div>
+                    
+                    <div id="live-chat-body" class="flex-1 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMCwwLDAsMC4wNSkiLz48L3N2Zz4=')] bg-slate-50 p-6 overflow-y-auto flex flex-col gap-4 scroll-smooth pb-32">
+                        <div class="flex justify-start">
+                            <div class="bg-white border border-slate-100 text-slate-700 text-sm py-3 px-5 rounded-2xl rounded-tl-sm shadow-[0_2px_10px_rgb(0,0,0,0.02)] max-w-[85%] leading-relaxed">
+                                Bonjour ! Je suis votre conseillère BIO virtuelle. 👋<br><br>Que recherchez-vous aujourd'hui pour votre routine beauté ?
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-0 inset-x-0 bg-white/80 backdrop-blur-md border-t border-slate-100 p-4 pt-2 z-10 flex flex-col gap-3">
+                        
+                        <div class="flex gap-2 overflow-x-auto pb-1 scrollbar-hide no-scrollbar">
+                            <button class="suggestion-btn shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs px-3 py-1.5 rounded-full transition-colors border border-slate-200/50" data-text="Quels sont vos produits ?">Quels sont vos produits ?</button>
+                            <button class="suggestion-btn shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs px-3 py-1.5 rounded-full transition-colors border border-slate-200/50" data-text="Je veux commander du karité">Je veux du karité</button>
+                            <button class="suggestion-btn shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs px-3 py-1.5 rounded-full transition-colors border border-slate-200/50" data-text="Quels sont vos délais ?">Quels sont vos délais ?</button>
+                        </div>
+
+                        <div class="relative flex items-center">
+                            <input type="text" id="live-chat-input" placeholder="Écrivez votre message ici..." class="w-full bg-white border border-slate-200 rounded-xl py-3 pl-4 pr-12 text-sm text-slate-700 focus:outline-none focus:border-[#1a3c34] focus:ring-1 focus:ring-[#1a3c34] transition-all placeholder:text-slate-400 shadow-sm" autocomplete="off">
+                            <button id="live-chat-send" class="absolute right-2 w-8 h-8 flex items-center justify-center bg-[#1a3c34] text-white rounded-lg hover:bg-[#122b25] transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                                <iconify-icon icon="solar:plain-2-linear" width="18" height="18" stroke-width="1.5"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech-stack" class="py-24 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-200 text-slate-700 text-xs font-medium mb-4">
+                    Note technique
+                </div>
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900 mb-4">Sous le capot : La Stack Technique</h2>
+                <p class="text-slate-500 text-base max-w-xl mx-auto">Aperçu de l'architecture mise en place pour faire fonctionner cet agent conversationnel de manière autonome.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm animate-on-scroll opacity-0 translate-y-8 ease-out delay-100">
+                    <h3 class="text-xl font-medium text-slate-900 mb-3 tracking-tight">Interface Web</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-4">Développement d'une Single Page Application (SPA) responsive pour simuler l'intégration sur un site e-commerce réel.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md font-medium">HTML5 / CSS3</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md font-medium">Vanilla JS</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md font-medium">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm animate-on-scroll opacity-0 translate-y-8 ease-out delay-200">
+                    <h3 class="text-xl font-medium text-slate-900 mb-3 tracking-tight">API & Logique Serveur</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-4">Création d'une API REST pour gérer les requêtes entrantes, formater les prompts et orchestrer les appels vers le modèle d'IA.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md font-medium">Python</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md font-medium">Flask</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md font-medium">JSON</span>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm animate-on-scroll opacity-0 translate-y-8 ease-out delay-300">
+                    <h3 class="text-xl font-medium text-slate-900 mb-3 tracking-tight">Modèle d'Intelligence Artificielle</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-4">Intégration du LLM pour l'analyse sémantique et la génération de réponses contextualisées selon le catalogue produit.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md font-medium">Gemini Flash</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md font-medium">Prompt Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="mb-12 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900 mb-4">La gestion de la donnée au cœur du projet</h2>
+                <p class="text-slate-500 text-base">Comment les informations transitent et sont traitées entre l'utilisateur et l'API.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100">
+                    <h4 class="text-base font-medium text-slate-900 tracking-tight mb-2">1. Structuration du contexte</h4>
+                    <p class="text-sm text-slate-500 mb-6">Le LLM est alimenté par un "System Prompt" strict contenant les données de la boutique (catalogue, prix en FCFA, horaires). Cela évite les hallucinations et garantit que l'IA reste dans son rôle de conseiller de vente Namplee.</p>
+                    
+                    <h4 class="text-base font-medium text-slate-900 tracking-tight mb-2">2. Communication Frontend/Backend</h4>
+                    <p class="text-sm text-slate-500">Les requêtes asynchrones transitent via des payloads JSON structurés. Le backend Flask assure le parsing, la validation des inputs utilisateurs, et la gestion des erreurs avant d'interroger le modèle.</p>
+                </div>
+                
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 font-mono text-xs text-slate-700 overflow-x-auto">
+                    <p class="text-slate-400 mb-2">// Exemple de payload JSON traité</p>
+                    <p>{</p>
+                    <p class="pl-4">"user_session": "sess_8921",</p>
+                    <p class="pl-4">"intent": "check_stock",</p>
+                    <p class="pl-4">"entities": {</p>
+                    <p class="pl-8">"product": "karite_pur",</p>
+                    <p class="pl-8">"quantity": 2</p>
+                    <p class="pl-4">},</p>
+                    <p class="pl-4">"raw_message": "Je veux 2 pots de karité"</p>
+                    <p>}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#1a3c34] text-white/80 pt-16 pb-8 border-t border-[#122b25]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
+                
+                <div class="max-w-xs">
+                    <div class="flex items-center gap-2 text-white mb-4">
+                        <iconify-icon icon="solar:leaf-linear" width="24" height="24" stroke-width="1.5"></iconify-icon>
+                        <span class="font-semibold tracking-tighter text-lg uppercase">Arame</span>
+                    </div>
+                    <p class="text-sm text-white/60 leading-relaxed">Assistant IA spécialisé pour les boutiques de cosmétiques BIO. Automatisez vos ventes et votre service client.</p>
+                </div>
+
+                <div class="text-sm text-white/50 text-left md:text-center max-w-sm">
+                    <p>Projet développé dans le cadre d'une formation en informatique.</p>
+                </div>
+
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-white transition-colors">
+                        <iconify-icon icon="solar:github-linear" width="20" height="20" stroke-width="1.5"></iconify-icon>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-white transition-colors">
+                        <iconify-icon icon="solar:linkedin-linear" width="20" height="20" stroke-width="1.5"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 text-xs text-white/40 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>© 2025 Alphousseyni Diouf. Tous droits réservés.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white/80 transition-colors">Confidentialité</a>
+                    <a href="#" class="hover:text-white/80 transition-colors">Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
